@@ -8,13 +8,9 @@ from typing import Callable, Iterable
 
 import polars as pl
 
-from Graphs.AdjacencyList import AdjacencyList
-from Graphs.AdjacencyMatrix import AdjacencyMatrix
-from Graphs.EdgeList import EdgeList
-
+from graphs import AdjacencyMatrix, AdjacencyList, EdgeList
 
 WeightedNeighbor = tuple[int, float]
-
 
 def _is_oneway(value) -> bool:
     """

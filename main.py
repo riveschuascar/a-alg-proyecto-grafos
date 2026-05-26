@@ -1,9 +1,10 @@
-from src.vehicleRange import (
+from src.vehicle_range import (
     build_graph_from_edges,
     vehicle_reachability,
     print_reachability_summary,
 )
 
+from src.vial_islands import analyze_weak_components
 
 def main():
     # Nodo origen
@@ -38,6 +39,11 @@ def main():
         result=result,
         show_paths=False,
         limit=20,
+    )
+
+    analyze_weak_components(
+        edges_path="datasets/edges.csv",
+        nodes_path="datasets/nodes.csv"
     )
 
 

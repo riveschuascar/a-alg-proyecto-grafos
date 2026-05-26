@@ -1,4 +1,4 @@
+from .UnionFind import UnionFind
 from .kosaraju import kosaraju
-from .union_find import UnionFind
 
-__all__ = ["kosaraju", "UnionFind"]
+__all__ = ["UnionFind", "kosaraju"]

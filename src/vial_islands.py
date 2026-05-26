@@ -1,5 +1,5 @@
 import polars as pl
-from algorithms import UnionFind
+from algorithms.UnionFind import UnionFind
 
 def analyze_weak_components(
     edges_path: str,
@@ -71,10 +71,3 @@ def analyze_weak_components(
         "largest_component_size": largest_component_size,
         "isolated_islands": isolated_islands
     }
-
-
-if __name__ == "__main__":
-    analyze_weak_components(
-        edges_path="datasets/edges.csv",
-        nodes_path="datasets/nodes.csv"
-    )

@@ -1,6 +1,6 @@
-from Graphs.Graph import Graph
-from Graphs.AdjacencyList import AdjacencyList
-from Graphs.AdjacencyMatrix import AdjacencyMatrix
-from Graphs.EdgeList import EdgeList
+from .Graph import Graph
+from .AdjacencyList import AdjacencyList
+from .AdjacencyMatrix import AdjacencyMatrix
+from .EdgeList import EdgeList
 
 __all__ = ["Graph", "AdjacencyList", "AdjacencyMatrix", "EdgeList"]
