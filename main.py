@@ -6,6 +6,7 @@ from src.vehicle_range import (
 
 from src.vial_islands import analyze_weak_components
 
+
 def main():
     # Nodo origen
     origin = 0
@@ -16,8 +17,9 @@ def main():
     # Representación del grafo
     representation = "adjacency_list"
 
-    # Dataset
+    # Datasets
     edges_path = "datasets/edges.csv"
+    nodes_path = "datasets/nodes.csv"
 
     print("Construyendo grafo...")
 
@@ -42,8 +44,8 @@ def main():
     )
 
     analyze_weak_components(
-        edges_path="datasets/edges.csv",
-        nodes_path="datasets/nodes.csv"
+        edges_path=edges_path,
+        nodes_path=nodes_path,
     )
 
 
