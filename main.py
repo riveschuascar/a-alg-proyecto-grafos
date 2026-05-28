@@ -43,10 +43,10 @@ def main():
         limit=20,
     )
 
-    analyze_weak_components(
-        edges_path=edges_path,
-        nodes_path=nodes_path,
-    )
+    # analyze_weak_components(
+    #     edges_path=edges_path,
+    #     nodes_path=nodes_path,
+    # )
 
 
 if __name__ == "__main__":
