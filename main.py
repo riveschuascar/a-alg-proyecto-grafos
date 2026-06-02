@@ -3,7 +3,7 @@ from src.utils.io.graphs import read_pkl, write_pkl, graph_from_csv
 from src.vehicle_range import build_graph_from_edges, vehicle_reachability, print_reachability_summary
 from src.vial_islands import analyze_weak_components
 from src.vial_diameter import road_diameter, print_diameter_summary
-from src.algorithms.mst import kruskal
+from src.vial_mst import find_mst_gig_component
 
 def main():
     edges_path = "datasets/edges.csv"
@@ -68,8 +68,7 @@ def main():
     elif option == 'vial_mst':
         g = read_pkl('adj-ls-dist-nodir')
         results = analyze_weak_components(g)
-        mst_edges, total_km = kruskal(g, results["giant_nodes"])
-        print(f'{total_km} km')
+        find_mst_gig_component(g, results['giant_nodes'])
 
     else:
         print("Opción no válida.")
