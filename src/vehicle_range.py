@@ -1,6 +1,6 @@
 import polars as pl
 
-from graphs.AdjacencyList import AdjacencyList
+from Graphs.AdjacencyList import AdjacencyList
 from algorithms.dijkstra import dijkstra_limitado, reconstruir_camino
 
 
