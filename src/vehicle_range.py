@@ -1,8 +1,7 @@
 import polars as pl
 
-from Graphs.AdjacencyList import AdjacencyList
-from algorithms.dijkstra import dijkstra_limitado, reconstruir_camino
-
+from .data_structures.graphs.adjacency_list import AdjacencyList
+from .algorithms.dijkstra import dijkstra_limitado, reconstruir_camino
 
 def is_oneway(value):
     if value is None:

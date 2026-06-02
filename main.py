@@ -1,15 +1,9 @@
 import sys
-
-from src.vehicle_range import (
-    build_graph_from_edges,
-    vehicle_reachability,
-    print_reachability_summary,
-)
-
+from src.utils.io.graphs import read_pkl, write_pkl, graph_from_csv
+from src.vehicle_range import build_graph_from_edges, vehicle_reachability, print_reachability_summary
 from src.vial_islands import analyze_weak_components
-
 from src.vial_diameter import road_diameter, print_diameter_summary
-
+from src.algorithms.mst import kruskal
 
 def main():
     edges_path = "datasets/edges.csv"
@@ -51,11 +45,13 @@ def main():
             limit=20,
         )
 
+    elif option == 'make_graph':
+        g = graph_from_csv('AdjacencyList', False)
+        write_pkl(g, 'adj-ls-dist-nodir')
+
     elif option == "vial_islands":
-        analyze_weak_components(
-            edges_path=edges_path,
-            nodes_path=nodes_path,
-        )
+        g = read_pkl('adj-ls-dist-nodir')
+        result = analyze_weak_components(g)
 
     elif option == "diameter":
         result = road_diameter(
@@ -69,6 +65,11 @@ def main():
             result=result,
             show_path=False,
         )
+    elif option == 'vial_mst':
+        g = read_pkl('adj-ls-dist-nodir')
+        results = analyze_weak_components(g)
+        mst_edges, total_km = kruskal(g, results["giant_nodes"])
+        print(f'{total_km} km')
 
     else:
         print("Opción no válida.")

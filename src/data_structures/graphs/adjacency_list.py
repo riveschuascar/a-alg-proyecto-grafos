@@ -1,4 +1,4 @@
-from .Graph import Graph
+from .graph import Graph
 
 class AdjacencyList(Graph):
     def __init__(self, v: int, directed: bool = False):

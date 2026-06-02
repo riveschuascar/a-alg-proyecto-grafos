@@ -1,6 +1,5 @@
 import heapq
 
-
 def dijkstra_limitado(grafo, origen, distancia_maxima):
     if origen < 0 or origen >= grafo.get_vertices():
         raise ValueError("El nodo origen no existe en el grafo.")

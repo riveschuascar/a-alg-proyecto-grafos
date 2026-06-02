@@ -1,9 +1,9 @@
 import polars as pl
 
-from Graphs.AdjacencyList import AdjacencyList
-from algorithms.components import largest_component_nodes
-from algorithms.dijkstra import dijkstra_completo, reconstruir_camino
-from src.vehicle_range import clean_distance, is_oneway
+from .data_structures.graphs import AdjacencyList
+from .algorithms.components import largest_component_nodes
+from .algorithms.dijkstra import dijkstra_completo, reconstruir_camino
+from .vehicle_range import clean_distance, is_oneway
 
 
 def read_required_data(edges_path, nodes_path):

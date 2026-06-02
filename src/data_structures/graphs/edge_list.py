@@ -1,4 +1,4 @@
-from .Graph import Graph
+from .graph import Graph
 
 class Edge:
     def __init__(self, u: int, v: int, weight: int):

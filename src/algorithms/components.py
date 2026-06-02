@@ -1,5 +1,5 @@
 from collections import defaultdict
-from algorithms.UnionFind import UnionFind
+from ..data_structures.union_find import UnionFind
 
 
 def weak_components(node_ids, from_nodes, to_nodes):

@@ -1,4 +1,4 @@
-from graphs import Graph, AdjacencyList, AdjacencyMatrix, EdgeList
+from ..data_structures.graphs import Graph, AdjacencyList, AdjacencyMatrix, EdgeList
 
 def kosaraju(graph: Graph) -> list[list[int]]:
     n = graph.get_vertices()
