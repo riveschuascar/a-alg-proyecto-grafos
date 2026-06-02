@@ -47,10 +47,10 @@ def main():
 
     elif option == 'make_graph':
         g = graph_from_csv('AdjacencyList', False)
-        write_pkl(g, 'adj-ls-dist-nodir')
+        write_pkl(g, 'adj-ls-dist-nodir.pkl')
 
     elif option == "vial_islands":
-        g = read_pkl('adj-ls-dist-nodir')
+        g = read_pkl('adj-ls-dist-nodir.pkl')
         result = analyze_weak_components(g)
 
     elif option == "diameter":
@@ -66,7 +66,7 @@ def main():
             show_path=False,
         )
     elif option == 'vial_mst':
-        g = read_pkl('adj-ls-dist-nodir')
+        g = read_pkl('adj-ls-dist-nodir.pkl')
         results = analyze_weak_components(g)
         find_mst_gig_component(g, results['giant_nodes'])
 
